@@ -2,15 +2,16 @@ import { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Navbar from './component/Navbar'
 import HomePage from './component/HomePage'
+import Themepage from './component/Themepage'
 
 function App() {
 
   return (
-    <div className=' h-[100%] w-screen'>
+    <div className='  bg-white h-[100%] w-screen'>
         <Navbar/>
         <Routes>
           <Route path='/' element={<HomePage/>} />
-          <Route path='/grid' />
+          <Route path='/grid' element={<Themepage/>} />
 
         </Routes>
     </div>
