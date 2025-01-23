@@ -8,7 +8,7 @@ const Navbar = () => {
   const [ select , setselect ] = useState(false) ;
 
   return (
-    <div className="min-w-full font-normal text-xl shadow-md bg-white  p-3 overflow-hidden">
+    <div className="z-20 min-w-full font-normal text-xl shadow-md  p-3 overflow-hidden">
       <div className=" sm:flex gap-4 sm:justify-end items-center hidden mr-6 ">
       <Link onClick={ () => { setselect(!select) } } className=" cursor-pointer" to={"/"} >Home</Link>
         <Link onClick={ () => { setselect(!select) } } className=" cursor-pointer" to={"/grid"}>Grid</Link>

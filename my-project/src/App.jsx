@@ -7,7 +7,7 @@ import Themepage from './component/Themepage'
 function App() {
 
   return (
-    <div className='  bg-white h-[100%] w-screen'>
+    <div className=' bg-opacity-80  h-[100%] w-screen ' >
         <Navbar/>
         <Routes>
           <Route path='/' element={<HomePage/>} />

@@ -9,6 +9,9 @@ const HomePage = () => {
         }
         return array;
       });
+
+
+      const[ selectsquare , setselectsquare ] = useState([]) ;
       
 
   const handleSquare = (i) => {
@@ -16,28 +19,25 @@ const HomePage = () => {
     if (!newarray[i].clicked) {
       newarray[i] = { color: "bg-red-500", clicked: true };
       setSquares(newarray);
+      const na = [...selectsquare , i ] ;
+      setselectsquare(na) ;
     }
   };
 
   const handleLast = () => {
-    const clicked = squares
-      .map((square, idx) => (square.clicked ? idx : null))
-      .filter((idx) => idx !== null);
-  
     const newarray = [...squares];
   
-    clicked.forEach((idx, i) => {
+    selectsquare.forEach((idx, i) => {
       setTimeout(() => {
         newarray[idx] = { color: "bg-cyan-900", clicked: false };
         setSquares([...newarray]);
       }, i * 500); 
     });
+
+      setselectsquare([]) ;
   };
   
-  
-  useEffect(() => {
 
-  }, [setSquares])
   
 
   return (

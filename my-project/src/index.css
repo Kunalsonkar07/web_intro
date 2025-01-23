@@ -2,18 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Prevent the back side from being visible until rotated */
-.backface-hidden {
-    backface-visibility: hidden;
-  }
-  
-  /* Rotate the card on the y-axis */
-  .rotate-y-180 {
-    transform: rotateY(180deg);
-  }
-  
-  /* Transition and perspective for a 3D effect */
-  .relative {
-    perspective: 1000px;
-  }
-  
